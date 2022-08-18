@@ -1,0 +1,165 @@
+@import "base";
+@import "colours";
+@import "typography";
+@import "mixins";
+
+.hero {
+    background-image: url('../images/desktop/image-hero.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: $lg;
+    position: relative;
+    color: $white;
+
+    .container {
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo,
+            .hamburger {
+                cursor: pointer;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            border: 2px solid $white;
+            padding: $mid;
+            transform: translateY(-50%);
+            width: calc(100% - 2 * $contentSpacing);
+            text-align: left;
+        }
+    }
+
+}
+
+.interactive {
+    padding-top: $xxl;
+
+    .container {
+        text-align: center;
+
+        h2 {
+            padding-top: $mid;
+        }
+
+        .text {
+            padding: 0 $mid;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.creations {
+    margin-top: $xxl;
+
+    h2 {
+        text-align: center;
+    }
+
+    .container {
+
+        .article-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            article {
+                width: 100%;
+                height: 180px;
+                margin-bottom: $mid;
+                padding: $mid;
+                // position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                h3 {
+                    width: 50%;
+                    color: $white;
+                    margin: 0;
+                    // position: absolute;
+                    // bottom: $mid;
+                    // left: $mid;
+                }
+
+                @include images('mobile');
+
+            }
+            button {
+                background-color: $white;
+                border: 1px solid $black;
+                padding: $baseSpacing $lg;
+                text-transform: uppercase;
+                transition: all 0.3s linear;
+    
+                &:hover {
+                    background-color: $black;
+                    color: $white;
+                }
+            }
+
+        }
+
+        
+    }
+}
+
+footer {
+    margin-top: $xl;
+    background-color: $black;
+    color: $white;
+    padding: $lg 0;
+
+    .container {
+        text-align: center;
+
+        nav {
+            margin: $mid 0;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    margin-bottom: $baseSpacing;
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+
+            ul {
+                display: flex;
+                gap: 15px;
+                // justify-content: space-between;
+                // width: 100px;
+
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+        }
+
+        p {
+            color: $grey;
+        }
+    }
+}

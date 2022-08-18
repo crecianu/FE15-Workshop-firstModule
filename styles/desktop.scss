@@ -1,0 +1,138 @@
+@import "base";
+@import "colours";
+@import "typography";
+@import "mixins";
+
+@media screen and (min-width: 990px) {
+    .container {
+        width: 900px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .hero {
+        background-image: url('../images/mobile/image-hero.jpg');
+        height: 600px;
+
+        .container {
+            header {
+                .hamburger {
+                    display: none;
+                }
+
+                nav {
+                    display: block;
+
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        gap: 15px;
+
+                        li {
+                            position: relative;
+                            cursor: pointer;
+                            padding-bottom: 10px;
+
+                            &:hover:after{
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                content: ' ';
+                                border-bottom: 2px solid $white;
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            h1 {
+                width: 600px;
+            }
+        }
+    }
+
+
+    .interactive {
+        .container {
+            position: relative;
+
+            img {
+                display: block;
+                width: 500px;
+            }
+
+            .text {
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: $white;
+                width: 500px;
+                text-align: left;
+            }
+        }
+    }
+
+    .creations {
+
+        h2 {
+            text-align: left;
+        }
+
+        .container {
+            position: relative;
+
+            .article-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 15px;
+
+                article {
+                    height: 320px;
+                    margin-bottom: 0;
+
+                    @include images('desktop');
+                }
+
+                button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+
+    footer {
+        .container {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+
+            .navigation-container {
+                nav {
+                    ul {
+                        display: flex;
+                        gap: 15px;
+
+                        li{
+                            margin:0;
+                        }
+                    }
+                }
+            }
+
+            .social {
+                padding-bottom: 30px; 
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

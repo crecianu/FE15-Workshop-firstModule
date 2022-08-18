@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p,
+li,
+a,
+span,
+button {
+  font-size: 1rem;
+}
+
+.hero {
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 45px;
+  position: relative;
+  color: white;
+}
+.hero .container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero .container header .logo,
+.hero .container header .hamburger {
+  cursor: pointer;
+}
+.hero .container header nav {
+  display: none;
+}
+.hero .container h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  border: 2px solid white;
+  padding: 30px;
+  transform: translateY(-50%);
+  width: calc(100% - 60px);
+  text-align: left;
+}
+
+.interactive {
+  padding-top: 120px;
+}
+.interactive .container {
+  text-align: center;
+}
+.interactive .container h2 {
+  padding-top: 30px;
+}
+.interactive .container .text {
+  padding: 0 30px;
+}
+.interactive .container img {
+  width: 100%;
+}
+
+.creations {
+  margin-top: 120px;
+}
+.creations h2 {
+  text-align: center;
+}
+.creations .container .article-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.creations .container .article-container article {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.creations .container .article-container article h3 {
+  width: 50%;
+  color: white;
+  margin: 0;
+}
+.creations .container .article-container article:nth-child(1) {
+  background-image: url("../images/mobile/image-deep-earth.jpg");
+}
+.creations .container .article-container article:nth-child(2) {
+  background-image: url("../images/mobile/image-night-arcade.jpg");
+}
+.creations .container .article-container article:nth-child(3) {
+  background-image: url("../images/mobile/image-soccer-team.jpg");
+}
+.creations .container .article-container article:nth-child(4) {
+  background-image: url("../images/mobile/image-grid.jpg");
+}
+.creations .container .article-container article:nth-child(5) {
+  background-image: url("../images/mobile/image-from-above.jpg");
+}
+.creations .container .article-container article:nth-child(6) {
+  background-image: url("../images/mobile/image-pocket-borealis.jpg");
+}
+.creations .container .article-container article:nth-child(7) {
+  background-image: url("../images/mobile/image-curiosity.jpg");
+}
+.creations .container .article-container article:nth-child(8) {
+  background-image: url("../images/mobile/image-fisheye.jpg");
+}
+.creations .container .article-container button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 15px 45px;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+}
+.creations .container .article-container button:hover {
+  background-color: black;
+  color: white;
+}
+
+footer {
+  margin-top: 60px;
+  background-color: black;
+  color: white;
+  padding: 45px 0;
+}
+footer .container {
+  text-align: center;
+}
+footer .container nav {
+  margin: 30px 0;
+}
+footer .container nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+footer .container nav ul li {
+  margin-bottom: 15px;
+}
+footer .container .social {
+  display: flex;
+  justify-content: center;
+}
+footer .container .social ul {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+footer .container p {
+  color: #8c8c8c;
+}/*# sourceMappingURL=main.css.map */

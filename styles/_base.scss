@@ -1,0 +1,13 @@
+@import 'spacings';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    padding: 0 $contentSpacing;
+}

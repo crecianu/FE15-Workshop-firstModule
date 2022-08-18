@@ -1,0 +1,13 @@
+$images: 'deep-earth', 'night-arcade', 'soccer-team', 'grid', 'from-above', 'pocket-borealis', 'curiosity', 'fisheye';
+
+@mixin images($view){
+
+    @for $i from 1 through 8 {
+
+        $image: nth($images, $i);
+        
+        &:nth-child(#{$i}){
+            background-image: url('../images/#{$view}/image-#{$image}.jpg');
+        }
+    }
+}
