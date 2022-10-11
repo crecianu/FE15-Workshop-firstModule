@@ -9,12 +9,15 @@
     <title>loopstudios</title>
     <link rel="icon" type="image/png" sizes="32*32" href="./images/icons/favicon-32x32.png">
 
-    <link href="./styles/main.css" rel="stylesheet" />
-    <link href="./styles/desktop.css" rel="stylesheet" media="screen and (min-width: 990px)"/>
+    <link href="./styles/products/main.css" rel="stylesheet" />
+    <link href="./styles/products/desktop.css" rel="stylesheet" rel="stylesheet"
+        media="screen and (min-width: 990px)" />
+    <script async src="./js/products/main.js"></script>
+
 </head>
 
 <body>
-    <section class="hero">
+    <section class="header">
         <div class="container">
             <header>
                 <a href="#">
@@ -43,60 +46,35 @@
                     </ul>
                 </nav>
             </header>
-            <h1>Imersive experience that deliver</h1>
         </div>
     </section>
 
-    <section class="interactive">
-        <div class="container">
-            <picture>
-                <source media="(min-width: 1200px)" srcset="./images/desktop/image-interactive.jpg">
-                <img src="./images/mobile/image-interactive.jpg" alt="Interactive">
-            </picture>
 
-            <div class="text">
-                <h2>The liber in interactive VR</h2>
-                <p>
-                    Founded in 2011, Loopstudios has been producing world-class virtual reality
-                    projects for some of the best companies around the globe. Our award-winning
-                    creations have transformed businesses through digital experiences that bind
-                    to their brand.
-                </p>
+    <section class="products">
+        <div class="container">
+            <h2>PRODUCTS</h2>
+            <div class="search">
+                <label for="search">Search</label>
+                <input id="search" name="search" type="text" />
+                <button id="search-button">Search in text</button>
             </div>
-        </div>
-    </section>
-
-    <section class="creations">
-        <div class="container">
-            <h2>Our Creation</h2>
-            <div class="article-container">
-                <article>
-                    <h3>Deep Earth</h3>
-                </article>
-                <article>
-                    <h3>Night Arcade</h3>
-                </article>
-                <article>
-                    <h3>Soccer Team VR</h3>
-                </article>
-                <article>
-                    <h3>The Grid</h3>
-                </article>
-                <article>
-                    <h3>From Up Above Vr</h3>
-                </article>
-                <article>
-                    <h3>Pocket Borealis</h3>
-                </article>
-                <article>
-                    <h3>The curiosity</h3>
-                </article>
-                <article>
-                    <h3>Make It Fisheye</h3>
-                </article>
-                <button>See all</button>
+            <div class="specific-filter">
+                <label for="price-filter">Price filter</label>
+                <select id="price-filter" name="search">
+                    <option value="-" default>All</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                </select>
             </div>
             
+
+            <div class="item-list">
+                
+            </div>
+            <div class="paginare">
+               
+            </div>
         </div>
     </section>
 
@@ -106,7 +84,7 @@
                 <a href="#">
                     <img class="logo" src="./images/icons/logo.svg" alt="Logo" />
                 </a>
-    
+
                 <nav>
                     <ul>
                         <li>About</li>
@@ -117,7 +95,7 @@
                     </ul>
                 </nav>
             </div>
-            
+
 
             <div class="social-container">
                 <div class="social">
@@ -146,7 +124,7 @@
                     <strong>© 2021 Loopstudios. All right reserved.</strong>
                 </p>
             </div>
-            
+
         </div>
     </footer>
 </body>

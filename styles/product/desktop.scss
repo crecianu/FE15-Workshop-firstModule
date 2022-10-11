@@ -1,19 +1,16 @@
-@import "base";
-@import "colours";
-@import "typography";
-@import "mixins";
+@import "../base";
+@import "../colours";
+@import "../typography";
+@import "../mixins";
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 900px) {
     .container {
         width: 900px;
         margin: 0 auto;
         padding: 0;
     }
 
-    .hero {
-        background-image: url('../images/mobile/image-hero.jpg');
-        height: 600px;
-
+    .header {
         .container {
             header {
                 .hamburger {
@@ -43,75 +40,8 @@
                                 border-bottom: 2px solid $white;
                                 width: 20px;
                             }
-
-                            a {
-                                color: $white;
-                                text-decoration: none;
-
-                                &:active,
-                                &:visited {
-                                    color: $white;
-                                }
-                            }
                         }
                     }
-                }
-            }
-
-            h1 {
-                width: 600px;
-            }
-        }
-    }
-
-
-    .interactive {
-        .container {
-            position: relative;
-
-            img {
-                display: block;
-                width: 500px;
-            }
-
-            .text {
-                z-index: 1;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                background-color: $white;
-                width: 500px;
-                text-align: left;
-            }
-        }
-    }
-
-    .creations {
-
-        h2 {
-            text-align: left;
-        }
-
-        .container {
-            position: relative;
-
-            .article-container {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                gap: 15px;
-
-                article {
-                    height: 320px;
-                    margin-bottom: 0;
-
-                    @include images('desktop');
-                }
-
-                button {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
                 }
             }
         }

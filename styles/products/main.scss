@@ -1,0 +1,146 @@
+@import "../base";
+@import "../colours";
+@import "../typography";
+@import "../mixins";
+
+.header {
+    padding-top: $lg;
+    width: 100%;
+    color: $white;
+    background-color: $black;
+
+    .container {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo,
+            .hamburger {
+                cursor: pointer;
+            }
+
+            nav {
+                display: none;
+
+                a {
+                    text-decoration: none;
+
+                    &:active,
+                    &:visited {
+                        color: white;
+                    }
+                }
+
+                .icon-chart {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+.products {
+    .container {
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+
+            .item {
+                border: 1px solid $black;
+                padding: 5px;
+
+                .image-container {
+                    cursor: pointer;
+                }
+
+                .title {
+                    text-align: center;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                .price-buy-container {
+                    padding-top: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .price {
+                        color: red;
+                    }
+
+                    .icon-chart {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .paginare {
+            display: flex;
+            justify-content: flex-end;
+
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 10px;
+
+                li {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .search {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+footer {
+    margin-top: $xl;
+    background-color: $black;
+    color: $white;
+    padding: $lg 0;
+
+    .container {
+        text-align: center;
+
+        nav {
+            margin: $mid 0;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    margin-bottom: $baseSpacing;
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+
+            ul {
+                display: flex;
+                gap: 15px;
+
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+        }
+
+        p {
+            color: $grey;
+        }
+    }
+}

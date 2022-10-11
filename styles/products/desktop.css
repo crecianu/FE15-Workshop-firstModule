@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p,
+li,
+a,
+span,
+button {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 990px) {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .header .container header .hamburger {
+    display: none;
+  }
+  .header .container header nav {
+    display: block;
+  }
+  .header .container header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .header .container header nav ul li {
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  .header .container header nav ul li:not(:last-of-type):hover:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: " ";
+    border-bottom: 2px solid white;
+    width: 20px;
+  }
+  footer .container {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .container .navigation-container nav ul {
+    display: flex;
+    gap: 15px;
+  }
+  footer .container .navigation-container nav ul li {
+    margin: 0;
+  }
+  footer .container .social {
+    padding-bottom: 30px;
+  }
+  footer .container p {
+    margin: 0;
+  }
+}/*# sourceMappingURL=desktop.css.map */

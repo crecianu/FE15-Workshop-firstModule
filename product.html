@@ -9,12 +9,14 @@
     <title>loopstudios</title>
     <link rel="icon" type="image/png" sizes="32*32" href="./images/icons/favicon-32x32.png">
 
-    <link href="./styles/main.css" rel="stylesheet" />
-    <link href="./styles/desktop.css" rel="stylesheet" media="screen and (min-width: 990px)"/>
+    <link href="./styles/product/main.css" rel="stylesheet" />
+    <link href="./styles/product/desktop.css" rel="stylesheet" rel="stylesheet" media="screen and (min-width: 900px)" />
+    <script async src="./js/product/main.js"></script>
+
 </head>
 
 <body>
-    <section class="hero">
+    <section class="header">
         <div class="container">
             <header>
                 <a href="#">
@@ -43,70 +45,46 @@
                     </ul>
                 </nav>
             </header>
-            <h1>Imersive experience that deliver</h1>
         </div>
     </section>
 
-    <section class="interactive">
+    <section class="product">
         <div class="container">
-            <picture>
-                <source media="(min-width: 1200px)" srcset="./images/desktop/image-interactive.jpg">
-                <img src="./images/mobile/image-interactive.jpg" alt="Interactive">
-            </picture>
+            <div class="details-container">
+                <div class="title">The title of the product</div>
+                <div class="upper-details">
+                    <div class="image-container">
+                        <img src="https://picsum.photos/200/300" alt="product" />
+                    </div>
+                    <div class="price-buy">
+                        <div class="price">100 lei</div>
 
-            <div class="text">
-                <h2>The liber in interactive VR</h2>
-                <p>
-                    Founded in 2011, Loopstudios has been producing world-class virtual reality
-                    projects for some of the best companies around the globe. Our award-winning
-                    creations have transformed businesses through digital experiences that bind
-                    to their brand.
-                </p>
+                        <div class="buy-button">
+                            <div class="text">
+                                <span>Adauga in cos</span>
+                                <div class="icon-chart">
+                                    <img src="./images/icons/shopping-cart-30x30.png" alt="Shopping cart" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="product-informations">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nobis quia assumenda in ullam
+                    quae placeat quam magnam quis! Voluptates corrupti aut vero error nostrum, libero omnis
+                    necessitatibus perspiciatis consequatur?
+                </div>
             </div>
         </div>
     </section>
-
-    <section class="creations">
-        <div class="container">
-            <h2>Our Creation</h2>
-            <div class="article-container">
-                <article>
-                    <h3>Deep Earth</h3>
-                </article>
-                <article>
-                    <h3>Night Arcade</h3>
-                </article>
-                <article>
-                    <h3>Soccer Team VR</h3>
-                </article>
-                <article>
-                    <h3>The Grid</h3>
-                </article>
-                <article>
-                    <h3>From Up Above Vr</h3>
-                </article>
-                <article>
-                    <h3>Pocket Borealis</h3>
-                </article>
-                <article>
-                    <h3>The curiosity</h3>
-                </article>
-                <article>
-                    <h3>Make It Fisheye</h3>
-                </article>
-                <button>See all</button>
-            </div>
-            
-        </div>
-    </section>
-
     <footer>
         <div class="container">
             <div class="navigation-container">
                 <a href="#">
                     <img class="logo" src="./images/icons/logo.svg" alt="Logo" />
                 </a>
-    
+
                 <nav>
                     <ul>
                         <li>About</li>
@@ -117,7 +95,7 @@
                     </ul>
                 </nav>
             </div>
-            
+
 
             <div class="social-container">
                 <div class="social">
@@ -146,7 +124,7 @@
                     <strong>© 2021 Loopstudios. All right reserved.</strong>
                 </p>
             </div>
-            
+
         </div>
     </footer>
 </body>

@@ -1,0 +1,133 @@
+@import "../base";
+@import "../colours";
+@import "../typography";
+@import "../mixins";
+
+.header{
+    padding-top: $lg;
+    width: 100%;
+    color: $white;
+    background-color: $black;
+
+    .container {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .logo,
+            .hamburger {
+                cursor: pointer;
+            }
+    
+            nav {
+                display: none;
+
+                a{
+                    text-decoration:none;
+
+                    &:active, &:visited{
+                        color: white;
+                    }
+                }
+
+                .icon-chart{
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+.product{
+    .container{
+        .details-container{
+            .title{
+                font-size: 40px;
+            }
+
+            .upper-details{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .price-buy{
+                width: 300px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .price{
+                    font-size: 30px;
+                    color: red;
+                }
+
+                .buy-button{
+                    margin: 0 20px;
+                    margin-bottom: 20px;
+                    border: 1px solid blue;
+                    background-color: aqua;
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    .text{
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &:hover{
+                        background-color: aquamarine;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+footer {
+    margin-top: $xl;
+    background-color: $black;
+    color: $white;
+    padding: $lg 0;
+
+    .container {
+        text-align: center;
+
+        nav {
+            margin: $mid 0;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    margin-bottom: $baseSpacing;
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+
+            ul {
+                display: flex;
+                gap: 15px;
+
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+        }
+
+        p {
+            color: $grey;
+        }
+    }
+}
