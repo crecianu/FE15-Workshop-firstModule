@@ -70,6 +70,20 @@ button {
 }
 .header .container header nav .icon-chart {
   background-color: white;
+  position: relative;
+}
+.header .container header nav .icon-chart .item-count {
+  position: absolute;
+  color: black;
+  border-radius: 50%;
+  background-color: red;
+  padding: 5px;
+  top: -20px;
+  right: -15px;
+  min-width: 30px;
+}
+.header .container header nav .icon-chart .item-count.hide {
+  display: none;
 }
 
 .product .container .details-container .title {
@@ -78,6 +92,26 @@ button {
 .product .container .details-container .upper-details {
   display: flex;
   justify-content: space-between;
+}
+.product .container .details-container .upper-details .image-container {
+  position: relative;
+}
+.product .container .details-container .upper-details .image-container .hide-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-color: grey;
+  top: 0;
+}
+.product .container .details-container .upper-details .image-container .hide-image .line {
+  position: absolute;
+  border: 1px solid black;
+  display: flex;
+  height: 100%;
+  top: 0;
+  left: 69px;
+  rotate: 28deg;
 }
 .product .container .details-container .price-buy {
   width: 300px;
@@ -90,7 +124,7 @@ button {
   font-size: 30px;
   color: red;
 }
-.product .container .details-container .price-buy .buy-button {
+.product .container .details-container .price-buy .button {
   margin: 0 20px;
   margin-bottom: 20px;
   border: 1px solid blue;
@@ -99,11 +133,11 @@ button {
   justify-content: center;
   cursor: pointer;
 }
-.product .container .details-container .price-buy .buy-button .text {
+.product .container .details-container .price-buy .button .text {
   display: flex;
   align-items: center;
 }
-.product .container .details-container .price-buy .buy-button:hover {
+.product .container .details-container .price-buy .button:hover {
   background-color: aquamarine;
 }
 

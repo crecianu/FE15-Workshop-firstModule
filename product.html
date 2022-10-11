@@ -11,8 +11,8 @@
 
     <link href="./styles/product/main.css" rel="stylesheet" />
     <link href="./styles/product/desktop.css" rel="stylesheet" rel="stylesheet" media="screen and (min-width: 900px)" />
-    <script async src="./js/product/main.js"></script>
-
+    <script async src="./js/common.js"></script>
+    <script async src="./js/product/productMain.js"></script>
 </head>
 
 <body>
@@ -40,7 +40,8 @@
                         <li>
                             <div class="icon-chart">
                                 <img src="./images/icons/shopping-cart-30x30.png" alt="Shopping cart" />
-                            </div>
+                                <div class="item-count hide">0</div>
+                            </div>    
                         </li>
                     </ul>
                 </nav>
@@ -51,29 +52,36 @@
     <section class="product">
         <div class="container">
             <div class="details-container">
-                <div class="title">The title of the product</div>
+                <div class="title"></div>
                 <div class="upper-details">
                     <div class="image-container">
-                        <img src="https://picsum.photos/200/300" alt="product" />
+                        <img id="productImage" src="" alt="" />
+                        <div class="hide-image">
+                            <div class="line"></div>
+                            <div>TExt</div>
+                        </div>
                     </div>
                     <div class="price-buy">
-                        <div class="price">100 lei</div>
+                        <div class="price"></div>
 
-                        <div class="buy-button">
+                        <button id="buy-button" class="button">
                             <div class="text">
                                 <span>Adauga in cos</span>
                                 <div class="icon-chart">
                                     <img src="./images/icons/shopping-cart-30x30.png" alt="Shopping cart" />
                                 </div>
                             </div>
-                        </div>
+                        </button>
+                        <button id="delete-button" class="button">
+                            <div class="text">
+                                <span>Scoate din cos</span>
+                            </div>
+                        </button>
 
                     </div>
                 </div>
                 <div class="product-informations">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nobis quia assumenda in ullam
-                    quae placeat quam magnam quis! Voluptates corrupti aut vero error nostrum, libero omnis
-                    necessitatibus perspiciatis consequatur?
+                    
                 </div>
             </div>
         </div>

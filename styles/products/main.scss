@@ -34,9 +34,38 @@
 
                 .icon-chart {
                     background-color: white;
+                    position: relative;
+
+                    .item-count{
+                        position: absolute;
+                        color: black;
+                        border-radius: 50%;
+                        background-color: red;
+                        padding: 5px;
+                        top: -20px;
+                        right: -15px;
+                        min-width: 30px;
+
+                        &.hide{
+                            display: none;
+                        }
+                    }
+
                 }
             }
         }
+    }
+}
+
+.modal{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    top: 20px;
+
+    &.hide{
+        display: none;
     }
 }
 

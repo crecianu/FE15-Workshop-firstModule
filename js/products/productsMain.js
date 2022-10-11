@@ -1,22 +1,54 @@
+fetch('url').then();
+
+
 const listLength = 28;
-const productList = [];
+let productList = [];
 let filteredList = [];
 const maxListCount = 8;
 
-function generateList() {
-    for (let i = 0; i < listLength; i++) {
-        const item = {
-            id: i,
-            title: `Title of product ${i}`,
-            img: 'https://picsum.photos/200/300',
-            imgShortDescription: `Item ${i}`,
-            price: 100 + i * 10,
-            currency: 'lei',
-        }
-        productList.push(item);
-    }
+const cartButton = document.querySelector('.icon-chart');
+cartButton.addEventListener('click', () =>{
+    const modal = document.querySelector('.modal');
+    modal.classList.remove('hide');
+});
 
-    localStorage.setItem('productList', JSON.stringify(productList));
+function generateList() {
+    const currencyList = ['lei', 'euro'];
+    function getRandomArbitrary(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
+    const existingList = localStorage.getItem('productList');
+
+    if(!existingList){
+        for (let i = 0; i < listLength; i++) {
+            let imageId = i;
+            // am facut asta pentru ca id-urile 7 si 17 nu le au ca imagine
+            if(i === 7){
+                imageId = 40
+            }
+    
+            if(i === 17){
+                imageId = 41
+            }
+    
+            const item = {
+                id: i,
+                title: `Title of product ${i}`,
+                description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nobis quia assumenda in ullam quae placeat quam magnam quis! Voluptates corrupti aut vero error nostrum, libero omnis necessitatibus perspiciatis consequatur?',
+                img: `https://picsum.photos/id/${1000 + imageId}/200/300`,
+                imgShortDescription: `Item ${i}`,
+                stock: 10,
+                isAddedToFavorite: true,
+                price: getRandomArbitrary(100, 1000),
+                currency: currencyList[Math.floor(Math.random()*currencyList.length)],
+            }
+            productList.push(item);
+        }
+        localStorage.setItem('productList', JSON.stringify(productList));
+    } else{
+        productList = JSON.parse(existingList);
+    }
 }
 
 function createItemImage(src, alt, containerClass) {
@@ -64,7 +96,7 @@ function createItem(itemObject) {
     const itemBuy = createPriceBuyContainer(itemObject.price, itemObject.currency);
 
     const anchor = document.createElement('a');
-    anchor.setAttribute('href', './product.html?id=' + itemObject.id);
+    anchor.setAttribute('href', './product.html?productId=' + itemObject.id);
     anchor.appendChild(itemImage)
 
     item.appendChild(anchor);
@@ -155,6 +187,9 @@ priceFilter.addEventListener('change', (e) =>{
         });
         populateHTML(0, filter);
         createPagination(filter);
+    } else{
+        populateHTML(0, productList);
+        createPagination(productList);
     }
 })
 
